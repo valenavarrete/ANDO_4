@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Atractivos Turísticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>Hola, Vale! Turisteamos? </h1>
+            <p class="description">
+                ¡Descubre lugares!
+            </p>
+        </header>
+
+        <div class="main-content">
+            <div class="column conditions-column">
+                <h2>Condiciones Actuales:</h2>
+                <p>Clima: <span id="climaActual">Cargando...</span></p>
+                <p>Hora: <span id="horaActual">Cargando...</span></p>
+                <p>Día: <span id="diaActual">Cargando...</span></p>
+            </div>
+
+            <div class="column preferences-column">
+                <h2>Selecciona tus Preferencias:</h2>
+
+                <div class="preference-group">
+                    <h3>Tipo de Turista:</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="tipoTurista" value="creativo" checked> Creativo
+                        </label>
+                        <label>
+                            <input type="radio" name="tipoTurista" value="explorador"> Explorador
+                        </label>
+                        <label>
+                            <input type="radio" name="tipoTurista" value="historiador"> Historiador
+                        </label>
+                        <label>
+                            <input type="radio" name="tipoTurista" value="aesthetic"> Aesthetic
+                        </label>
+                    </div>
+                </div>
+
+                <div class="preference-group">
+                    <h3>¿Eres Foodie?</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="foodie" value="si"> Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="foodie" value="no" checked> No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="preference-group">
+                    <h3>¿Te gusta ir de Compras?</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="shopping" value="si"> Sí
+                        </label>
+                        <label>
+                            <input type="radio" name="shopping" value="no" checked> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="recomendarBtn">Obtener Recomendación</button>
+
+        <div class="output-section final-recommendation">
+            <h2>Tu Recomendación:</h2>
+            <p class="recommendation" id="recomendacionOutput">Presiona "Obtener Recomendación"</p>
+
+            <div class="map-container">
+                <div id="simpleMap" class="simple-map">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
